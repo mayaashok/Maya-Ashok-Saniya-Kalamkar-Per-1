@@ -12,6 +12,8 @@
         
 </head>   
 <body>
+    <?php
+    ?>
     <div class="w3-top">
         <div class="w3-bar w3-white w3-card" id="myNavbar">
           <a href="index.html" class="w3-bar-item w3-button w3-wide"><i class="fa fa-home"></i> HOMEPAGE</a>
