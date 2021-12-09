@@ -1,50 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!DOCTYPE html>
-<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
     <!--Navbar-->
-    <div class="w3-top">
-      <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="index.html" class="w3-bar-item w3-button w3-wide"><i class="fa fa-home"></i> HOMEPAGE</a>
-        <a href="addPlanner.php" class="w3-bar-item w3-button"><i class="fa fa-calendar-plus-o"></i></i> ADD PLANNER</a>
-        <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-calendar"></i></i> MY PLANNER</a>
-        <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGOUT</a>
-      </div>
-    </div>
+    <div id="nav-placeholder"></div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
     <!-- Header with full-height image -->
-    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-xxlarge">Start something that matters</span><br>
-        <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-        <p><a href="addPlanner.php" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Start</a></p>
-      </div> 
+    <header class="bgimg-1" id="home">
+      <div class="top">
+        <span style="font-size: 36px">Start something that matters</span><br />
+        <span style="font-size: 18px"
+          >Stop wasting valuable time with projects that just isn't you.
+        </span>
+        <p>
+          <a href="addPlanner.html" class="startButton">Start</a>
+        </p>
+      </div>
     </header>
   </body>
 </html>
 
 <style>
-  body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-  body, html {
-    height: 100%;
-    line-height: 1.8;
+  body {
+    font-family: "Raleway", sans-serif;
   }
-  /* Full height image header */
+  header {
+    position: relative;
+    filter: grayscale(50%);
+  }
   .bgimg-1 {
     background-position: center;
     background-size: cover;
     background-image: url("diary.jpeg");
     min-height: 100%;
   }
-  </style>
+  .top {
+    padding: 48px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    -ms-transform: translate(-0%, -50%);
+    color: #fff;
+  }
+  .startButton {
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    white-space: normal;
+    width: 100%;
+    color: #000;
+    background-color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    opacity: 1;
+  }
+  .startButton:hover {
+    opacity: 0.6;
+  }
+</style>

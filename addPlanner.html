@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>   
+<body>
+    <!--Navbar-->
+    <div id="nav-placeholder"></div>
+    <script>
+      $(function () {
+        $("#nav-placeholder").load("nav.html");
+      });
+    </script>
+    <!-- <?php
+    ?> -->
+    <div>
+      <h1> Make your planner!</h1>
+      <p>Please enter a due date in the input field:</p>
+      <form action="/action_page.php" method "post">
+          <label for="date">Due Date:</label>
+          <input type="date" id="date" name="date">
+          <br> </br>
+          Assignment: <br> </br><input type="text" name="assignment"><br>
+          <br><br/>
+          <button class="start">START</button>
+      </form>
+    </div>
+</body>
+</html>
+
+<style>
+</style>
